@@ -1,0 +1,88 @@
+void main() {
+// Q.1: Create a list of names and print all names using list.
+var listofstudents = ["ANAS","MEHROOZ","ABDUL BAQI","YAHYA","SHERAZ","HASSAN","AMNA","SIDRA","AYESHA"];
+print(listofstudents);  
+// Q.2: Create an empty list of type string called days.
+//Use the add method to add names of 7 days and print all days.
+var namesofdayslist = [];
+namesofdayslist.addAll(["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]);
+print(namesofdayslist);
+// Q.3: Create a list of Days and remove one by one from the end of list.
+var namesofdays = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+namesofdays.removeLast();
+namesofdays.removeLast();
+namesofdays.removeLast();
+namesofdays.removeLast();
+namesofdays.removeLast();
+namesofdays.removeLast();
+namesofdays.removeLast();
+print(namesofdays);
+// Q.4: Create a list of numbers & write a program to get the smallest & greatest number from a list.
+var numbers = ["0","-11","2","-3","14","5","6","17","8","90","10"];
+numbers.sort();
+print(numbers.first);
+print(numbers.last);
+// Q.5: remove all false values from below list by using removeWhere or retainWhere property.
+// List<String> usersEligibility = ['John', 'Alice', 'eligible', 'Mike', 'Sarah', 'Tom']
+List<String> usersEligibility = ['John', 'Alice', 'eligible', 'Mike', 'Sarah', 'Tom'];
+usersEligibility.removeWhere((user) => user == "eligible" );
+usersEligibility.retainWhere((user) => user == "eligible" );
+print(usersEligibility);
+// Q.6: Given a list of integers, write a dart code that returns the maximum value from the list.
+var max = ["22","1","99","-5","77.5","-40.4","62"];
+max.sort();
+print(max.last);
+// Q.7: Write a Dart code that takes in a list of strings and removes any duplicate elements, 
+// returning a new list without duplicates.
+// The order of elements in the new list should be the same as in the original list.
+var grocerylist = ["sugar","flour","oil","spices","ghee","eggs","oil","vegetables","oil","sugar"];
+//                     0      1       2     3       4       5     6       7           8     9
+grocerylist.removeAt(6);
+grocerylist.removeAt(7);
+grocerylist.removeAt(7);
+print(grocerylist);
+// Q.8: Write a Dart code that takes in a list and an integer n as parameters. 
+// The program should print a new list containing the first n elements from the original list
+List listofnumbers = [1,3,7,4,2,8,9];
+int n = 7;
+print(listofnumbers.sublist(2));
+// Q.9: Write a Dart code that takes in a list of strings and prints a new list with the elements in reverse order.
+//The original list should remain unchanged.
+List<String> namesofmonths = ["January","February","March","April"];
+var newlist = namesofmonths.reversed;
+print(newlist);
+// Q.10: Implement a code that takes in a list of integers and returns a new list containing only the..
+// unique elements from the original list.
+// The order of elements in the new list should be the same as in the original list.
+var meetingdates = [11,9,5,15,20,9,4,5,27,15];
+// also we can use List<int> = finaldates=meetingdates.toset().tolist();
+var finaldates = meetingdates.toSet();
+print(finaldates);
+// Q.11: Write a Dart code that takes in a list of integers and prints a new list with the elements sorted in ascending order. 
+//The original list should remain unchanged.
+List<int> vacantshelfs = [111,500,430,118,109,78,320,257];
+vacantshelfs.sort();
+vacantshelfs.reversed;
+print(vacantshelfs);
+// Q.12: Implement a Dart code that uses the where() method to filter out negative numbers from a list of integers. 
+//The program should take in the original list as a parameter and print a new list containing only the positive numbers.
+var temperature = [10,20,-10,30,-2,-8,33,40];
+var requiredtemplist = temperature.removeWhere((temperature) => temperature <= 0);
+print(temperature);
+// Q.13: Implement a Dart code that uses the where() method to filter out odd numbers from a list of integers.
+// The program should take in the original list as a parameter and print a new list containing only the even numbers
+
+// Q.14: Create 3 different list of Strings, int & bool, 
+//then replace middle element from list1, third last from list2, 
+//2nd, 3rd & 4th element from list3 using replaceRange() method.
+
+List<String> listname = ["Anas","Abdul Baqi","Mehrooz","Sheraz","Yahya",];
+List<int> listrollnum = [112,114,117,113,110,111,];
+List<bool> listauthen = [true,false,true,false,true,false];
+var reqmid = listname.replaceRange(2, 3, []);
+var reqrollnum = listrollnum.replaceRange(3, 4, [222]);
+var reqaut = listauthen.replaceRange(1, 4, [true]); 
+print(listrollnum);
+print(listname);
+print(listauthen);
+}
